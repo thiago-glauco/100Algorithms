@@ -1,0 +1,13 @@
+2: PROGRAMMING CHALLENGE
+Write a script that prints the first 10 numbers of the Fibonacci Sequence.
+
+- You can use any programming language/editor (local, code sandbox).
+- You can assume Fibonacci starts with [0,1] as your initial input.
+- The Fibonacci sequence is the sum of the two previous digits.
+- You can look at Wikipedia page for the Fibonacci Sequence details
+
+Example output:
+0,1,1,2,3,5,8,13,21,34
+
+Time limit: 25 minutes
+Please share your screen, you can begin now.
