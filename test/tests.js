@@ -3,6 +3,7 @@ const fs = require( 'fs' );
 const towerBreakers = require( '../Tower Breakers/solution' );
 const add = require( '../add/solution' );
 const sortByLength = require( '../sortByLength/sort-by-length' );
+const validateExpression = require( '../expressionValidation/expression-validator' );
 
 let data = fs.readFileSync( './test/towerBreakerDataSet.txt' ).toString().split( '\r\n' );
 let expected = fs.readFileSync( './test/towerBreakerResultsSet.txt' ).toString().split( '\r\n' );
@@ -30,5 +31,15 @@ describe( "testing sorting by length", ( ) => {
             expect( sortByLength( testCase.data ).toString( ) ).to.be.eq( testCase.sorted.toString( ) )
         })
         
+    })
+})
+
+describe( "testing expression validation", ( ) => {
+    let expressions = JSON.parse( fs.readFileSync( './test/expressions.json' ).toString( ) );
+    expressions.forEach( ex => {
+        it( `will check ${ex.expression} and must return ${ex.result}`, ( ) => {
+            expect( validateExpression( ex.expression ) ).to.be.a( 'boolean' ).and.to.be.equal( ex.result );
+           // expect( validateExpression( ex.expression ) ).to.be.equal( ex.result );
+        })
     })
 })

@@ -1,0 +1,34 @@
+[
+    {
+        "expression":"( ) [ ] { }",
+        "result": true
+    },
+    {
+        "expression":"( [ ] )",
+        "result": true
+    },
+    {
+        "expression": "[ { ] { }",
+        "result": false
+    },
+    {
+        "expression": "",
+        "result": true
+    },
+    {
+        "expression": "( ( [ { } ] } )",
+        "result": false
+    },
+    {
+        "expression": "( 2 + 3)",
+        "result": true
+    },
+    {
+        "expression": "( 2 + 3 (",
+        "result": false
+    },
+    {
+        "expression": "{ 3 [ 2 + 5 ] }",
+        "result": true
+    }
+]

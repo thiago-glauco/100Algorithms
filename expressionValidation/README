@@ -1,0 +1,5 @@
+given an expression, analize if (), [], and {} are correctly closed.
+1- ( [ {} ] ) is valid
+2- { [ } ] is invalid 
+4- ( ) [ ] { } is valid
+5 - ( [ ) ] { } ] } is invalid
