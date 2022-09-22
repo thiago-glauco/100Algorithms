@@ -4,6 +4,7 @@ const towerBreakers = require( '../Tower Breakers/solution' );
 const add = require( '../add/solution' );
 const sortByLength = require( '../sortByLength/sort-by-length' );
 const validateExpression = require( '../expressionValidation/expression-validator' );
+const isPalindrome = require( '../isPalindrome/is-palindrome' );
 
 let data = fs.readFileSync( './test/towerBreakerDataSet.txt' ).toString().split( '\r\n' );
 let expected = fs.readFileSync( './test/towerBreakerResultsSet.txt' ).toString().split( '\r\n' );
@@ -34,11 +35,12 @@ describe( "testing sorting by length", ( ) => {
     })
 })
 
-describe( "testing expression validation", ( ) => {
-    let expressions = JSON.parse( fs.readFileSync( './test/expressions.json' ).toString( ) );
+describe( "testing: isPalindrome validation", ( ) => {
+    let expressions = JSON.parse( fs.readFileSync( './test/palindroms.json' ).toString( ) );
     expressions.forEach( ex => {
         it( `will check ${ex.expression} and must return ${ex.result}`, ( ) => {
-            expect( validateExpression( ex.expression ) ).to.be.a( 'boolean' ).and.to.be.equal( ex.result );
+            //console.log( isPalindrome( ex.expression ) )
+            expect( isPalindrome( ex.expression ) ).to.be.a( 'boolean' ).and.to.be.equal( ex.result );
            // expect( validateExpression( ex.expression ) ).to.be.equal( ex.result );
         })
     })

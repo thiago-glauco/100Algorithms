@@ -1,0 +1,62 @@
+[
+    {
+        "expression":"Madam, I'm Adam",
+        "result": true
+    },
+    {
+        "expression":"( [ ] )",
+        "result": true
+    },
+    {
+        "expression": "race car",
+        "result": true
+    },
+    {
+        "expression": "",
+        "result": true
+    },
+    {
+        "expression": "O rato roeu a roupa do rei de roma",
+        "result": false
+    },
+    {
+        "expression": "Arara rara",
+        "result": true
+    },
+    {
+        "expression": "A rara arara",
+        "result": true
+    },
+    {
+        "expression": "{ 3 [ 2 + 5 ] }",
+        "result": false
+    },
+    {
+        "expression": "Uma frase quaquer",
+        "result": false
+    },
+    {
+        "expression": "S.O.S",
+        "result": true
+    },
+    {
+        "expression": "Casa",
+        "result": false
+    },
+    {
+        "expression": "caca",
+        "result": false
+    },
+    {
+        "expression": "A caca",
+        "result": true
+    },
+    {
+        "expression": "Zaz",
+        "result": true
+    }, 
+    {
+        "expression": "Zas",
+        "result": false
+    }
+]
