@@ -5,9 +5,6 @@ function towerBreakers(n, m) {
     }
     
     if( n === 1 ) {
-        if( m % 2 === 0 ) {
-            return 1;
-        }
         return 1;
     }
     
@@ -16,7 +13,6 @@ function towerBreakers(n, m) {
     }
     
     return 1;
-          
 }
 
 module.exports = towerBreakers;

@@ -1,11 +1,18 @@
 let a = [ [1, 2], [3, 4] ];
-let k = [[1,2,3,4], [8,7,6,5], [9, 10, 11, 12], [13,14,15,16]]
+let k = [[1,2,3,4], [8,7,6,5], [9, 10, 11, 12], [13,14,15,16]];
+
+let l = [
+    [112, 42, 83, 119],
+    [56, 125, 56, 49],
+    [15, 78, 101, 43],
+    [62, 98, 114, 108],
+]
 
 function subMatrixSum( m ) {
 
     let greaterEdges = [];
-    let greaterVerticals = [];
-    let greaterHorizontals = [];
+    ///let greaterVerticals = [];
+    //let greaterHorizontals = [];
 
         for( let line = 0, mirrorLine = m.length -1; line < m.length/2 ; line ++, mirrorLine-- ) {
             for( let column = 0, mirrorColumn = m.length - 1; column < m.length/2; column++, mirrorColumn-- ) {
@@ -16,7 +23,7 @@ function subMatrixSum( m ) {
                     m[mirrorLine][mirrorColumn]
                 ];
                 console.log(temp);
-                greaterEdges.push( temp.sort((a, b) => { a - b}).reverse( )[0] );
+                greaterEdges.push( temp.sort((a, b) => a - b).reverse( )[0] );
             }
          }
     return greaterEdges.reduce( (a,b) => a + b, 0 );
@@ -24,3 +31,4 @@ function subMatrixSum( m ) {
 
 console.log( subMatrixSum( a ) );
 console.log( subMatrixSum( k ) );
+console.log( subMatrixSum( l ) );
